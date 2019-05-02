@@ -8,8 +8,8 @@ const {take, filter, map} = require('rxjs/operators')
  */
 
 const obs = interval(1000).pipe(
-  take(10),
   filter(x => x % 2 === 0),
+  take(10),
   map(x => x * 100)
 )
 
