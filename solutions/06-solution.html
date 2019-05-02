@@ -74,7 +74,13 @@
       weightFieldElem.value = val;
       weightSliderElem.value = val;
     })
-    height$.subscribe(val => heightTextElem.textContent = 'Height: ' + val + 'cm')
+    
+    height$.subscribe(val => {
+      heightTextElem.textContent = 'Height: ' + val + 'cm';
+      heightFieldElem.value = val;
+      heightSliderElem.value = val;
+    })
+    
     bmi$.subscribe(val => bmiElem.textContent = String(val))
   </script>
 </body>
